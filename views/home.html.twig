@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Lets Play Rock Paper Scissors</h1>
+            <h2>Play Player 1 is Human and Player 2 is Human</h2>
+            <form class="" action="/play" method="post">
+                <div class="form-group">
+                    <label for="player_one">Player One:</label>
+                    <select id="player_one" name="player_one">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="player_two">Player Two:</label>
+                    <select id="player_two" name="player_two">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                </div>
+                <button class="btn btn-danger" type="submit">Fight!</button>
+            </form>
+            <h2>Play with Player 2 as Computer</h2>
+            <form class="" action="/computer" method="post">
+                <div class="form-group">
+                    <label for="player_one">Player One:</label>
+                    <select id="player_one" name="player_one">
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                    </select>
+                </div>
+                <button class="btn btn-danger" type="submit">Play Computer</button>
+            </form>
+            <h1>RESULT:</h1>
+            {% if result is not empty %}
+            <h3>{{ result }}</h3>
+            {% endif %}
+        </div>
+    </body>
+</html>
